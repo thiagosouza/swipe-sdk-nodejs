@@ -4,14 +4,6 @@
       "views": [
         {
           "id": "codesandbox.browser"
-        },
-        {
-          "id": "codesandbox.browser",
-          "closeable": true,
-          "options": {
-            "port": 9229,
-            "url": "https://yelmc-9229.sse.codesandbox.io"
-          }
         }
       ]
     },

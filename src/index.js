@@ -1,3 +1,5 @@
+import * as express from "express";
+
 var http = require("http");
 
 const swp = require("@swp/swipe-sdk");
@@ -20,4 +22,4 @@ http
   })
   .listen(8080); //the server object listens on port 8080
 
-console.log(swp, "foo=>bar", "Local test");
+console.log(swp, "foo=>bar", "Local test      ");

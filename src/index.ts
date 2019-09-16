@@ -11,7 +11,7 @@ swp.init({
   sandbox: true
 });
 
-debugger;
+
 //create a server object:
 http
   .createServer(function(req, res) {
@@ -22,4 +22,4 @@ http
   })
   .listen(8080); //the server object listens on port 8080
 
-console.log(swp, "foo=>bar", "Local test      ");
+console.log(swp, "foo=>bar", "Local Host");

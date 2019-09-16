@@ -5,14 +5,21 @@
   "main": "src/index.js",
   "scripts": {
     "___start": "nodemon src/index.js localhost 8080",
-    "start": "nodemon",
-    "_____start": "node --inspect=5858 -r ts-node/register ./src/server.ts",
+    "__start": "nodemon",
+    "start": "node --inspect-brk=5858 -r ts-node/register ./src/index.ts",
     "start:watch": "nodemon",
     "build": "tsc"
   },
   "nodemonConfig": {
-    "ignore": ["**/*.test.ts", "**/*.spec.ts", ".git", "node_modules"],
-    "watch": ["src"],
+    "ignore": [
+      "**/*.test.ts",
+      "**/*.spec.ts",
+      ".git",
+      "node_modules"
+    ],
+    "watch": [
+      "src"
+    ],
     "exec": "npm start",
     "ext": "ts"
   },
@@ -21,6 +28,7 @@
     "@types/node": "12.7.5",
     "eslint": "6.4.0",
     "eslint-plugin-import": "2.18.2",
+    "express": "^4.17.1",
     "nodemon": "1.19.2",
     "ts-node": "8.4.1",
     "typescript": "3.6.3"

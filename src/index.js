@@ -20,4 +20,4 @@ http
   })
   .listen(8080); //the server object listens on port 8080
 
-console.log(swp, "foo=>bar");
+console.log(swp, "foo=>bar", "Local test");

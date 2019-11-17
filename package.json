@@ -4,10 +4,13 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
-    "setup": "docker-compose up -d",
+    "docker:setup": "docker-compose up -d",
+    "docker:db:bash": "docker-compose -f docker-compose.yml exec db bash",
+    "docker:db:migration": "docker exec -it api_db_1 psql -U swp -d swp -f /tmp/migration.sql",
+    "docker:pgsql:connect": "docker-compose -f ./docker-compose.yml exec db psql -U swp -d ledger",
     "___start": "nodemon src/index.js localhost 8080",
     "__start": "nodemon",
-    "start": "node --inspect-brk=5858 -r ts-node/register ./src/index.ts",
+    "start": "node --inspect=5858 -r ts-node/register ./src/index.ts",
     "start:watch": "nodemon",
     "build": "tsc"
   },
@@ -28,6 +31,7 @@
     "@swp/ledger-sdk": "0.0.31",
     "@swp/swipe-sdk": "0.9.2",
     "@types/node": "12.7.5",
+    "dotenv": "^8.1.0",
     "eslint": "6.4.0",
     "eslint-plugin-import": "2.18.2",
     "express": "^4.17.1",
